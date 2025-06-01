@@ -1,35 +1,51 @@
-# Website Toko Oleh-oleh Khas Serang
+# Website Chadel Food: Oleh-oleh Khas Serang
 
-Website statis untuk toko online oleh-oleh khas Serang. Website ini dibuat menggunakan HTML, CSS, dan JavaScript.
+Website statis untuk toko online oleh-oleh khas Serang (Chadel Food). Website ini dibuat menggunakan HTML, CSS, dan JavaScript, serta kompatibel untuk hosting di GitHub Pages.
 
 ## Fitur
 
-- Tampilan responsif menggunakan Bootstrap 5
-- Katalog produk dengan gambar dan deskripsi
-- Integrasi WhatsApp untuk pemesanan
-- Desain modern dan user-friendly
+- Tampilan responsif (mobile friendly) dengan Bootstrap 5
+- Navbar dengan logo dan warna merah tua
+- Hero section dengan background gambar produk (pisang)
+- Katalog produk dengan gambar, deskripsi, harga, dan tombol beli
+- Efek zoom pada gambar produk saat hover
+- Integrasi WhatsApp untuk pemesanan otomatis
+- Footer dengan copyright
+- Mudah di-deploy ke GitHub Pages
 
 ## Struktur File
 
 ```
 .
 ├── index.html          # Halaman utama website
-├── styles.css          # File CSS untuk styling
-├── script.js           # File JavaScript untuk fungsi interaktif
-└── images/            # Folder untuk menyimpan gambar
-    ├── hero-bg.jpg
-    ├── emping.jpg
-    ├── kerupuk.jpg
-    └── dodol.jpg
+├── styles.css          # File CSS untuk styling dan efek
+├── script.js           # File JavaScript untuk tombol WhatsApp
+├── README.md           # Dokumentasi
+└── images/             # Folder untuk gambar
+    ├── Chadel.png      # Logo utama
+    ├── pisang.png      # Background hero section
+    ├── emping.jpg      # Gambar produk emping
+    ├── kerupuk.jpg     # Gambar produk kerupuk
+    ├── dodol.jpg       # Gambar produk dodol
+    └── ...             # Gambar produk lainnya
 ```
 
 ## Cara Deploy ke GitHub Pages
 
-1. Buat repository baru di GitHub
-2. Push semua file ke repository
-3. Pergi ke Settings > Pages
-4. Pilih branch main sebagai source
-5. Website akan otomatis di-deploy ke `https://[username].github.io/[repository-name]`
+1. Push semua file ke repository GitHub Anda.
+2. Buka repository di GitHub, masuk ke **Settings > Pages**.
+3. Pastikan source sudah diatur ke branch `main` dan folder `/ (root)`.
+4. Tunggu beberapa menit, website akan online di:
+   `https://[username].github.io/[repository-name]/`
+
+## Cara Update Website
+
+Jika ada perubahan pada file, jalankan perintah berikut di terminal:
+```
+git add .
+git commit -m "update konten"
+git push
+```
 
 ## Kontak
 
