@@ -5,12 +5,15 @@ Website statis untuk toko online oleh-oleh khas Serang (Chadel Food). Website in
 ## Fitur
 
 - Tampilan responsif (mobile friendly) dengan Bootstrap 5
-- Navbar dengan logo dan warna merah tua
-- Hero section dengan background gambar produk (pisang)
-- Katalog produk dengan gambar, deskripsi, harga, dan tombol beli
-- Efek zoom pada gambar produk saat hover
-- Integrasi WhatsApp untuk pemesanan otomatis
-- Footer dengan copyright
+- Navbar dengan logo Chadel Food (Chadel.png) dan warna merah tua
+- Hero section dengan background gambar produk (pisang.png) dan overlay gelap
+- Katalog produk utama:
+  - **Pisuju** (Pisang Susu Keju) — images/pisuju.jpg
+  - **Pisuka** (Pisang Susu Kacang) — images/pisuka.jpg
+  - **Pismond** (Pisang Almond) — images/pismond.jpg
+- Gambar produk bisa di-zoom saat hover
+- Tombol "Beli Sekarang" langsung terhubung ke WhatsApp dengan pesan otomatis sesuai produk
+- Footer copyright 2025
 - Mudah di-deploy ke GitHub Pages
 
 ## Struktur File
@@ -22,32 +25,10 @@ Website statis untuk toko online oleh-oleh khas Serang (Chadel Food). Website in
 ├── script.js           # File JavaScript untuk tombol WhatsApp
 ├── README.md           # Dokumentasi
 └── images/             # Folder untuk gambar
-    ├── Chadel.png      # Logo utama
+    ├── Chadel.png      # Logo utama & favicon
     ├── pisang.png      # Background hero section
-    ├── emping.jpg      # Gambar produk emping
-    ├── kerupuk.jpg     # Gambar produk kerupuk
-    ├── dodol.jpg       # Gambar produk dodol
+    ├── pisuju.jpg      # Gambar produk Pisuju
+    ├── pisuka.jpg      # Gambar produk Pisuka
+    ├── pismond.jpg     # Gambar produk Pismond
     └── ...             # Gambar produk lainnya
 ```
-
-## Cara Deploy ke GitHub Pages
-
-1. Push semua file ke repository GitHub Anda.
-2. Buka repository di GitHub, masuk ke **Settings > Pages**.
-3. Pastikan source sudah diatur ke branch `main` dan folder `/ (root)`.
-4. Tunggu beberapa menit, website akan online di:
-   `https://[username].github.io/[repository-name]/`
-
-## Cara Update Website
-
-Jika ada perubahan pada file, jalankan perintah berikut di terminal:
-```
-git add .
-git commit -m "update konten"
-git push
-```
-
-## Kontak
-
-Untuk informasi lebih lanjut, silakan hubungi:
-- WhatsApp: +628988513047 
