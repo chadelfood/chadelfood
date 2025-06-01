@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chadel Food</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/Chadel.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/Chadel.png" alt="Chadel Logo" height="40" class="me-2">
+                Chadel Food
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produk">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center py-5">
+        <div class="container">
+            <h1>Oleh-oleh Khas Serang</h1>
+            <p class="lead">Nikmati kelezatan dan keunikan oleh-oleh khas Serang</p>
+        </div>
+    </header>
+
+    <section id="produk" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Produk Kami</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pisuju.jpg" class="card-img-top" alt="Pisuju">
+                        <div class="card-body">
+                            <h5 class="card-title">Pisuju - Pisang Susu Keju</h5>
+                            <p class="card-text">Keripik pisang yang dilumuri kental manis dan keju berkualitas. Khas Serang dengan rasa gurih, manis, dan renyah.</p>
+                            <p class="price">Rp 15.000/pack</p>
+                            <button class="btn btn-primary" onclick="pesanProduk('Pisuju', 15000)">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pisuka.jpg" class="card-img-top" alt="Pisuka">
+                        <div class="card-body">
+                            <h5 class="card-title">Pisuka - Pisang Susu Kacang</h5>
+                            <p class="card-text">Keripik pisang yang dilumuri kental manis dan kacang berkualitas. Khas Serang dengan rasa gurih, manis, dan renyah.</p>
+                            <p class="price">Rp 15.000/pack</p>
+                            <button class="btn btn-primary" onclick="pesanProduk('Pisuka', 30000)">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/pismond.jpg" class="card-img-top" alt="Pismond">
+                        <div class="card-body">
+                            <h5 class="card-title">Pismond - Pisang Almond</h5>
+                            <p class="card-text">Keripik pisang yang dilumuri kental manis dan kacang almond berkualitas. Khas Serang dengan rasa gurih, manis, dan renyah.</p>
+                            <p class="price">Rp 15.000/pack</p>
+                            <button class="btn btn-primary" onclick="pesanProduk('Pismond', 35000)">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Tentang Kami</h2>
+            <p class="text-center">Kami adalah toko oleh-oleh khas Serang yang menyediakan berbagai produk berkualitas dengan harga terjangkau. Produk kami dibuat dengan bahan-bahan pilihan dan diproduksi secara higienis.</p>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Kontak Kami</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <p>Hubungi kami melalui WhatsApp:</p>
+                    <a href="https://wa.me/+628988513047" class="btn btn-success">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Chadel Food: Oleh-oleh Khas Serang. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
