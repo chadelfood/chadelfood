@@ -83,4 +83,10 @@ section {
 
 footer {
     margin-top: 0;
+}
+
+.weight {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
 } 
