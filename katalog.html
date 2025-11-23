@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk - Chadel Food</title>
+    
+    <!-- Meta tags untuk SEO -->
+    <meta name="description" content="Katalog lengkap produk Chadel Food - Oleh-oleh Khas Serang berupa keripik pisang dengan berbagai varian.">
+    <meta name="keywords" content="katalog chadel food, katalog keripik pisang, katalog oleh-oleh serang">
+    <meta name="author" content="Chadel Food">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Meta tags untuk WhatsApp preview -->
+    <meta property="og:title" content="Katalog Produk - Chadel Food">
+    <meta property="og:description" content="Lihat katalog lengkap produk Chadel Food - Oleh-oleh Khas Serang">
+    <meta property="og:image" content="https://chadelfood.github.io/chadelfood/images/Chadel.png">
+    <meta property="og:url" content="https://chadelfood.github.io/chadelfood/katalog.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Katalog Produk - Chadel Food">
+    <meta name="twitter:description" content="Lihat katalog lengkap produk Chadel Food - Oleh-oleh Khas Serang">
+    <meta name="twitter:image" content="https://chadelfood.github.io/chadelfood/images/Chadel.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/Chadel.png">
+    <style>
+        .katalog-container {
+            padding: 60px 0;
+        }
+        
+        .katalog-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        
+        .katalog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 20px 0;
+            justify-items: stretch;
+        }
+        
+        .katalog-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+        }
+        
+        /* Center baris terakhir jika hanya 2 item (item 4 dan 5 dari total 5) */
+        /* Item 4 dan 5 diposisikan di kolom 1 dan 3, lalu di-center dengan transform atau margin */
+        .katalog-item:nth-child(4):nth-last-child(2) {
+            grid-column: 1;
+            transform: translateX(calc(50% + 15px));
+        }
+        
+        .katalog-item:nth-child(5):nth-last-child(1) {
+            grid-column: 3;
+            transform: translateX(calc(-50% - 15px));
+        }
+        
+        /* Center jika hanya 1 item di baris terakhir */
+        .katalog-item:nth-child(3n+1):nth-last-child(1):not(:nth-child(4)) {
+            grid-column: 2;
+        }
+        
+        .katalog-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .katalog-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .katalog-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Modal untuk zoom gambar */
+        .katalog-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            cursor: pointer;
+        }
+        
+        .katalog-modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 1200px;
+            max-height: 90vh;
+            object-fit: contain;
+            margin-top: 5vh;
+        }
+        
+        .katalog-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .katalog-modal-close:hover {
+            color: #bbb;
+        }
+        
+        @media (max-width: 992px) {
+            .katalog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            /* Reset center untuk tablet - 2 kolom */
+            .katalog-item:nth-child(4):nth-last-child(2),
+            .katalog-item:nth-child(5):nth-last-child(1) {
+                grid-column: auto;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            /* Center jika hanya 1 item di baris terakhir (2 kolom) */
+            .katalog-item:nth-child(2n+1):nth-last-child(1) {
+                grid-column: 1 / 2;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .katalog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .katalog-grid {
+                gap: 20px;
+            }
+            
+            .katalog-title {
+                margin-bottom: 30px;
+            }
+            
+            /* Reset semua center untuk mobile */
+            .katalog-item {
+                grid-column: auto !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/Chadel.png" alt="Chadel Logo" height="40" class="me-2">
+                Chadel Food
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#produk">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="katalog.html">Katalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="company-profile.html">Company Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#kontak">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="katalog-container">
+        <div class="container">
+            <h1 class="katalog-title">Katalog Produk Chadel Food</h1>
+            <div class="katalog-grid">
+                <div class="katalog-item" onclick="openModal('images/katalog01.jpg')">
+                    <img src="images/katalog01.jpg" alt="Katalog 01" loading="lazy">
+                </div>
+                <div class="katalog-item" onclick="openModal('images/katalog02.jpg')">
+                    <img src="images/katalog02.jpg" alt="Katalog 02" loading="lazy">
+                </div>
+                <div class="katalog-item" onclick="openModal('images/katalog03.jpg')">
+                    <img src="images/katalog03.jpg" alt="Katalog 03" loading="lazy">
+                </div>
+                <div class="katalog-item" onclick="openModal('images/katalog04.jpg')">
+                    <img src="images/katalog04.jpg" alt="Katalog 04" loading="lazy">
+                </div>
+                <div class="katalog-item" onclick="openModal('images/katalog05.jpg')">
+                    <img src="images/katalog05.jpg" alt="Katalog 05" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal untuk zoom gambar -->
+    <div id="katalogModal" class="katalog-modal" onclick="closeModal()">
+        <span class="katalog-modal-close">&times;</span>
+        <img class="katalog-modal-content" id="modalImage" src="" alt="Katalog">
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Chadel Food: Oleh-oleh Khas Serang. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('katalogModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('katalogModal');
+            modal.style.display = 'none';
+        }
+
+        // Tutup modal dengan tombol ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
+
