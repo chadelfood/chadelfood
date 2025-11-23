@@ -131,12 +131,13 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             
-            /* Reset center untuk tablet - 2 kolom */
+            /* Reset center dan transform untuk tablet - 2 kolom */
             .katalog-item:nth-child(4):nth-last-child(2),
             .katalog-item:nth-child(5):nth-last-child(1) {
                 grid-column: auto;
                 margin-left: 0;
                 margin-right: 0;
+                transform: none;
             }
             
             /* Center jika hanya 1 item di baris terakhir (2 kolom) */
@@ -150,21 +151,44 @@
         @media (max-width: 768px) {
             .katalog-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .katalog-grid {
                 gap: 20px;
             }
             
             .katalog-title {
                 margin-bottom: 30px;
+                font-size: 1.75rem;
             }
             
-            /* Reset semua center untuk mobile */
+            /* Reset semua center dan transform untuk mobile */
             .katalog-item {
                 grid-column: auto !important;
                 margin-left: 0 !important;
                 margin-right: 0 !important;
+                transform: none !important;
+            }
+            
+            /* Pastikan semua item full width di mobile */
+            .katalog-item img {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .katalog-container {
+                padding: 40px 0;
+            }
+            
+            .katalog-title {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+            
+            .katalog-grid {
+                gap: 15px;
+            }
+            
+            .katalog-item {
+                border-radius: 8px;
             }
         }
     </style>
