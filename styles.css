@@ -91,6 +91,47 @@
     color: #716b62;
 }
 
+.product-filters {
+    display: grid;
+    grid-template-columns: minmax(220px, 2fr) minmax(190px, 1fr) minmax(190px, 1fr) auto;
+    align-items: end;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.product-filters label {
+    display: block;
+    margin-bottom: 6px;
+    color: #514b43;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.product-filters .form-control,
+.product-filters .form-select {
+    min-height: 44px;
+    border-color: #d9d2c7;
+    border-radius: 5px;
+}
+
+.product-filters .btn {
+    min-height: 44px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.product-result-count {
+    margin-bottom: 20px;
+    color: #716b62;
+    font-size: 0.9rem;
+}
+
+.product-empty-message {
+    padding: 28px 12px;
+    color: #716b62;
+    text-align: center;
+}
+
 .card {
     height: 100%;
     border: 1px solid #e9e3d9;
@@ -222,6 +263,14 @@ footer {
 
     .section-heading h2 {
         font-size: 2rem;
+    }
+
+    .product-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .product-filters .btn {
+        width: 100%;
     }
 
     .hero-section h1 {

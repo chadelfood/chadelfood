@@ -73,7 +73,35 @@
                 <h2>Temukan rasa favoritmu</h2>
                 <p>Dibuat dengan bahan pilihan, renyah dalam setiap gigitan.</p>
             </div>
-            <div class="row">
+            <div class="product-filters" aria-label="Pencarian dan filter produk">
+                <div class="product-search">
+                    <label for="productSearch">Cari produk</label>
+                    <input type="search" id="productSearch" class="form-control" placeholder="Cari nama atau deskripsi...">
+                </div>
+                <div>
+                    <label for="productNameFilter">Nama produk</label>
+                    <select id="productNameFilter" class="form-select">
+                        <option value="">Semua produk</option>
+                        <option value="Pisuju - Pisang Susu Keju">Pisuju - Pisang Susu Keju</option>
+                        <option value="Pisuka - Pisang Susu Kacang">Pisuka - Pisang Susu Kacang</option>
+                        <option value="Pismond - Pisang Almond">Pismond - Pisang Almond</option>
+                        <option value="Sabar Mini Keju - Sagon Bakar">Sabar Mini Keju - Sagon Bakar</option>
+                        <option value="Goldnut">Goldnut</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="productPriceFilter">Rentang harga</label>
+                    <select id="productPriceFilter" class="form-select">
+                        <option value="">Semua harga</option>
+                        <option value="0-20000">Maks. Rp20.000</option>
+                        <option value="20001-40000">Rp20.001 - Rp40.000</option>
+                        <option value="40001-">Di atas Rp40.000</option>
+                    </select>
+                </div>
+                <button type="button" id="resetProductFilters" class="btn btn-outline-secondary">Reset</button>
+            </div>
+            <p id="productResultCount" class="product-result-count" aria-live="polite"></p>
+            <div class="row" id="productGrid">
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="images/pisuju.jpg" class="card-img-top" alt="Pisuju">
@@ -107,6 +135,30 @@
                             <p class="price">Rp 20.000/pack</p>
                             <p class="weight">Berat: 100 gram</p>
                             <button class="btn btn-primary" onclick="pesanProduk('Pismond', 20000, '100 gram')">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/sabar-mini-keju-topless.jpg" class="card-img-top" alt="Sabar Mini Keju - Sagon Bakar">
+                        <div class="card-body">
+                            <h5 class="card-title">Sabar Mini Keju - Sagon Bakar</h5>
+                            <p class="card-text">Sagon bakar mini dengan rasa keju yang gurih dan tekstur lembut, cocok untuk camilan bersama keluarga.</p>
+                            <p class="price">Rp 35.000/pack</p>
+                            <p class="weight">Berat: 230 gram</p>
+                            <button class="btn btn-primary" onclick="pesanProduk('Sabar Mini Keju - Sagon Bakar', 35000, '230 gram')">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/sabar-mini-keju-pouch.jpg" class="card-img-top" alt="Sabar Mini Keju Sagon Bakar kemasan pouch">
+                        <div class="card-body">
+                            <h5 class="card-title">Sabar Mini Keju - Sagon Bakar</h5>
+                            <p class="card-text">Sagon bakar mini rasa keju yang gurih dengan tekstur lembut, dikemas praktis dalam pouch untuk camilan kapan saja.</p>
+                            <p class="price">Rp 15.000/pack</p>
+                            <p class="weight">Berat: 100 gram</p>
+                            <button class="btn btn-primary" onclick="pesanProduk('Sabar Mini Keju - Sagon Bakar', 15000, '100 gram')">Beli Sekarang</button>
                         </div>
                     </div>
                 </div>
@@ -172,6 +224,7 @@
                     </div>
                 </div>
             </div>
+            <p id="productEmptyMessage" class="product-empty-message d-none">Produk tidak ditemukan. Coba ubah pencarian atau filter.</p>
         </div>
     </section>
 
