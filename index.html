@@ -57,16 +57,22 @@
         </div>
     </nav>
 
-    <header class="hero-section text-center py-5">
-        <div class="container">
-            <h1>Oleh-oleh Khas Serang</h1>
-            <p class="lead">Nikmati kelezatan dan keunikan oleh-oleh khas Serang</p>
+    <header class="hero-section">
+        <div class="container hero-content">
+            <p class="hero-eyebrow">Camilan khas dari Serang</p>
+            <h1>Renyah pisangnya,<br>selalu bikin rindu.</h1>
+            <p class="lead">Keripik pisang dengan balutan rasa favorit, dibuat untuk menemani momen berbagi.</p>
+            <a href="https://wa.me/628988513047" class="btn btn-success btn-lg hero-cta" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
         </div>
     </header>
 
-    <section id="produk" class="py-5">
+    <section id="produk" class="products-section py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Produk Kami</h2>
+            <div class="section-heading text-center">
+                <p class="section-eyebrow">Pilihan Chadel</p>
+                <h2>Temukan rasa favoritmu</h2>
+                <p>Dibuat dengan bahan pilihan, renyah dalam setiap gigitan.</p>
+            </div>
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card">
@@ -74,9 +80,9 @@
                         <div class="card-body">
                             <h5 class="card-title">Pisuju - Pisang Susu Keju</h5>
                             <p class="card-text">Keripik pisang yang dilumuri kental manis dan keju berkualitas. Khas Serang dengan rasa gurih, manis, dan renyah.</p>
-                            <p class="price">Rp 18.000/pack</p>
+                            <p class="price">Rp 20.000/pack</p>
                             <p class="weight">Berat: 100 gram</p>
-                            <button class="btn btn-primary" onclick="pesanProduk('Pisuju', 18000)">Beli Sekarang</button>
+                            <button class="btn btn-primary" onclick="pesanProduk('Pisuju', 20000, '100 gram')">Beli Sekarang</button>
                         </div>
                     </div>
                 </div>
@@ -86,9 +92,9 @@
                         <div class="card-body">
                             <h5 class="card-title">Pisuka - Pisang Susu Kacang</h5>
                             <p class="card-text">Keripik pisang yang dilumuri kental manis dan kacang berkualitas. Khas Serang dengan rasa gurih, manis, dan renyah.</p>
-                            <p class="price">Rp 18.000/pack</p>
+                            <p class="price">Rp 20.000/pack</p>
                             <p class="weight">Berat: 100 gram</p>
-                            <button class="btn btn-primary" onclick="pesanProduk('Pisuka', 18000)">Beli Sekarang</button>
+                            <button class="btn btn-primary" onclick="pesanProduk('Pisuka', 20000, '100 gram')">Beli Sekarang</button>
                         </div>
                     </div>
                 </div>
@@ -100,7 +106,19 @@
                             <p class="card-text">Keripik pisang yang dilumuri kental manis dan kacang almond berkualitas. Khas Serang dengan rasa gurih, manis, dan renyah.</p>
                             <p class="price">Rp 20.000/pack</p>
                             <p class="weight">Berat: 100 gram</p>
-                            <button class="btn btn-primary" onclick="pesanProduk('Pismond', 18000)">Beli Sekarang</button>
+                            <button class="btn btn-primary" onclick="pesanProduk('Pismond', 20000, '100 gram')">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/goldnut.jpg" class="card-img-top" alt="Goldnut">
+                        <div class="card-body">
+                            <h5 class="card-title">Goldnut</h5>
+                            <p class="card-text">Pilihan Goldnut dari Chadel Food, cocok untuk teman ngemil.</p>
+                            <p class="price">Rp 25.000/pack</p>
+                            <p class="weight">Berat: 100 gram</p>
+                            <button class="btn btn-primary" onclick="pesanProduk('Goldnut', 25000, '100 gram')">Beli Sekarang</button>
                         </div>
                     </div>
                 </div>
@@ -111,9 +129,9 @@
                         <div class="card-body">
                             <h5 class="card-title">Pisuju - Pisang Susu Keju</h5>
                             <p class="card-text">Keripik pisang yang dilumuri kental manis dan keju berkualitas. Khas Serang dengan rasa gurih, manis, dan renyah.</p>
-                            <p class="price">Rp 38.000/pack</p>
+                            <p class="price">Rp 40.000/pack</p>
                             <p class="weight">Berat: 250 gram</p>
-                            <button class="btn btn-primary" onclick="pesanProduk('Pisuju 250g', 38000)">Beli Sekarang</button>
+                            <button class="btn btn-primary" onclick="pesanProduk('Pisuju 250g', 40000, '250 gram')">Beli Sekarang</button>
                         </div>
                     </div>
                 </div>
@@ -123,9 +141,9 @@
                         <div class="card-body">
                             <h5 class="card-title">Pisuka - Pisang Susu Kacang</h5>
                             <p class="card-text">Keripik pisang yang dilumuri kental manis dan kacang berkualitas. Khas Serang dengan rasa gurih, manis, dan renyah.</p>
-                            <p class="price">Rp 38.000/pack</p>
+                            <p class="price">Rp 40.000/pack</p>
                             <p class="weight">Berat: 250 gram</p>
-                            <button class="btn btn-primary" onclick="pesanProduk('Pisuka 250g', 38000)">Beli Sekarang</button>
+                            <button class="btn btn-primary" onclick="pesanProduk('Pisuka 250g', 40000, '250 gram')">Beli Sekarang</button>
                         </div>
                     </div>
                 </div>
@@ -137,7 +155,19 @@
                             <p class="card-text">Keripik pisang yang dilumuri kental manis dan kacang almond berkualitas. Khas Serang dengan rasa gurih, manis, dan renyah.</p>
                             <p class="price">Rp 40.000/pack</p>
                             <p class="weight">Berat: 250 gram</p>
-                            <button class="btn btn-primary" onclick="pesanProduk('Pismond 250g', 38000)">Beli Sekarang</button>
+                            <button class="btn btn-primary" onclick="pesanProduk('Pismond 250g', 40000, '250 gram')">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/goldnut.jpg" class="card-img-top" alt="Goldnut">
+                        <div class="card-body">
+                            <h5 class="card-title">Goldnut</h5>
+                            <p class="card-text">Pilihan Goldnut dari Chadel Food, cocok untuk teman ngemil.</p>
+                            <p class="price">Rp 50.000/pack</p>
+                            <p class="weight">Berat: 250 gram</p>
+                            <button class="btn btn-primary" onclick="pesanProduk('Goldnut 250g', 50000, '250 gram')">Beli Sekarang</button>
                         </div>
                     </div>
                 </div>
@@ -145,14 +175,14 @@
         </div>
     </section>
 
-    <section id="kontak" class="py-5">
+    <section id="kontak" class="contact-section py-5">
         <div class="container">
             <h2 class="text-center mb-4">Kontak Kami</h2>
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
                     <p>Hubungi kami melalui WhatsApp:</p>
-                    <a href="https://wa.me/+628988513047" class="btn btn-success">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    <a href="https://wa.me/628988513047" class="btn btn-success contact-cta" target="_blank" rel="noopener noreferrer">
+                        WhatsApp
                     </a>
                 </div>
             </div>
@@ -166,7 +196,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html> 
